@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feliz cumpleaños,mi karencita ✨</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&family=Playfair+Display:ital,wght@1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- LOADING SCREEN -->
+    <div id="loader">
+      <div class="loader-inner">
+        <div class="loader-ring"></div>
+        <div class="loader-text">Preparando algo mágico…</div>
+      </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- SCROLL PROGRESS -->
+    <div id="scroll-progress"></div>
+
+    <!-- MUSIC TOGGLE -->
+    <button id="music-btn" aria-label="Toggle music">
+      <span class="music-icon">♪</span>
+      <span class="music-label">Musica</span>
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav id="nav">
+      <div class="nav-logo">Mi karencita ✦</div>
+      <div class="nav-links">
+        <a href="#hero">Hogar</a>
+        <a href="#cake-section">Pastel</a>
+        <a href="#letter">Carta </a>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+    <section id="hero">
+      <canvas id="particle-canvas"></canvas>
+      <div class="hero-glow-follow" id="glow-follow"></div>
+
+      <div class="hero-content">
+        <div class="greeting-tag" id="time-greeting">Hoy es tu día</div>
+        <h1 class="hero-title">
+          <span class="title-line line-1">feliz</span>
+          <span class="title-line line-2">cumpleaños</span>
+          <span class="title-line line-3 italic-name">mi bebe</span>
+        </h1>
+        <p class="hero-subtitle">El mundo se volvió más hermoso el día en que naciste.</p>
+        <button class="cta-btn" id="open-surprise-btn">
+          <span class="btn-text">Abre tu sorpresa</span>
+          <span class="btn-glow"></span>
+        </button>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Desplaza hacia abajo</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       TRANSITION OVERLAY (for surprise trigger)
+  ═══════════════════════════════════════════ -->
+    <div id="transition-overlay">
+      <canvas id="confetti-canvas"></canvas>
+      <div class="transition-content">
+        <div class="surprise-emoji">🎂</div>
+        <h2 class="surprise-title">Una sorpresa, solo para ti</h2>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+       CAKE SECTION
+  ═══════════════════════════════════════════ -->
+    <section id="cake-section">
+      <div class="section-header">
+        <span class="section-tag">Pide un deseo</span>
+        <h2 class="section-title">Apaga las velas</h2>
+      </div>
+
+
+      <div class="cake-scene" id="cake-scene">
+        <!-- CSS Birthday Cake -->
+        <div class="cake-wrapper" id="cake-wrapper">
+          <div class="cake-glow-ring"></div>
+
+          <!-- Candles -->
+          <div class="candles-row" id="candles-row">
+            <div class="candle candle-pink" data-index="0">
+              <div class="candle-smoke hidden"></div>
+              <div class="candle-body"></div>
+              <div class="candle-flame">
+                <div class="flame-inner"></div>
+              </div>
+            </div>
+            <div class="candle candle-blue" data-index="1">
+              <div class="candle-smoke hidden"></div>
+              <div class="candle-body"></div>
+              <div class="candle-flame">
+                <div class="flame-inner"></div>
+              </div>
+            </div>
+            <div class="candle candle-yellow" data-index="2">
+              <div class="candle-smoke hidden"></div>
+              <div class="candle-body"></div>
+              <div class="candle-flame">
+                <div class="flame-inner"></div>
+              </div>
+            </div>
+            <div class="candle candle-green" data-index="3">
+              <div class="candle-smoke hidden"></div>
+              <div class="candle-body"></div>
+              <div class="candle-flame">
+                <div class="flame-inner"></div>
+              </div>
+            </div>
+            <div class="candle candle-orange" data-index="4">
+              <div class="candle-smoke hidden"></div>
+              <div class="candle-body"></div>
+              <div class="candle-flame">
+                <div class="flame-inner"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cake Layers -->
+          <div class="cake-top-layer">
+            <div class="cake-frosting-top"></div>
+            <div class="cake-sprinkles">
+              <span class="sprinkle s1"></span>
+              <span class="sprinkle s2"></span>
+              <span class="sprinkle s3"></span>
+              <span class="sprinkle s4"></span>
+              <span class="sprinkle s5"></span>
+              <span class="sprinkle s6"></span>
+            </div>
+            <span class="cake-text-decor">Feliz cumpleaños</span>
+          </div>
+          <div class="cake-mid-layer">
+            <div class="cake-frosting-mid"></div>
+            <div class="cake-sprinkles">
+              <span class="sprinkle s1"></span>
+              <span class="sprinkle s2"></span>
+              <span class="sprinkle s3"></span>
+              <span class="sprinkle s4"></span>
+              <span class="sprinkle s5"></span>
+              <span class="sprinkle s6"></span>
+              <span class="sprinkle s7"></span>
+              <span class="sprinkle s8"></span>
+            </div>
+          </div>
+          <div class="cake-base-layer">
+            <div class="cake-frosting-base"></div>
+            <div class="cake-sprinkles">
+              <span class="sprinkle s1"></span>
+              <span class="sprinkle s2"></span>
+              <span class="sprinkle s3"></span>
+              <span class="sprinkle s4"></span>
+              <span class="sprinkle s5"></span>
+              <span class="sprinkle s6"></span>
+              <span class="sprinkle s7"></span>
+              <span class="sprinkle s8"></span>
+              <span class="sprinkle s9"></span>
+              <span class="sprinkle s10"></span>
+            </div>
+          </div>
+          <div class="cake-plate"></div>
+        </div>
+
+        <!-- Blow controls -->
+        <div class="blow-controls" id="blow-controls">
+          <p class="blow-hint">Respira hondo y…</p>
+          <button class="blow-btn" id="blow-btn">
+            <span>💨 ¡Sopla las velas!</span>
+          </button>
+          <p class="mic-hint" id="mic-hint">
+            o <button id="mic-btn" class="mic-link">usa tu micrófono</button>
+          </p>
+        </div>
+
+        <!-- Post-wish message -->
+        <div class="wish-message hidden" id="wish-message">
+          <p class="typewriter" id="wish-text"></p>
+        </div>
+      </div>
+
+      <!-- Fireworks canvas -->
+      <canvas id="fireworks-canvas"></canvas>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       LETTER / ENVELOPE SECTION
+  ═══════════════════════════════════════════ -->
+    <section id="letter">
+      <div class="section-header">
+        <span class="section-tag">Una nota para ti</span>
+        <h2 class="section-title">Solo para ti</h2>
+      </div>
+
+      <div class="envelope-scene" id="envelope-scene">
+        <div class="envelope" id="envelope">
+          <div class="env-body">
+            <div class="env-flap" id="env-flap"></div>
+            <div class="env-left-fold"></div>
+            <div class="env-right-fold"></div>
+            <div class="env-bottom-fold"></div>
+            <div class="env-seal">
+              <span>♥</span>
+            </div>
+          </div>
+          <div class="open-prompt" id="open-prompt">Toca para abrir ✉️</div>
+        </div>
+
+        <div class="letter-paper hidden" id="letter-paper">
+          <div class="letter-header">
+            <span class="letter-date" id="letter-date"></span>
+          </div>
+          <div class="letter-body">
+            <p class="letter-salutation">Mi amada Karencita,</p>
+            <p class="letter-para" id="letter-p1"></p>
+            <p class="letter-para" id="letter-p2"></p>
+            <p class="letter-para" id="letter-p3"></p>
+            <p class="letter-sign">
+              Con todo el amor del mundo,<br /><em> de alguen que te ama</em> 💛
+            </p>
+          </div>
+          <div class="letter-hearts" id="letter-hearts"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       WISHES GENERATOR
+  ═══════════════════════════════════════════ -->
+    <section id="wishes">
+      <div class="section-header">
+        <span class="section-tag">por un cumpleaños magico</span>
+        <h2 class="section-title">Pide un deseo al seleccionar</h2>
+      </div>
+      <div class="wishes-scene">
+        <div class="wish-display" id="wish-display">
+          <div class="wish-quote" id="wish-quote">Haz clic a continuación para recibir tu deseo ✨</div>
+        </div>
+        <button class="wish-spin-btn" id="wish-spin-btn">✦ Formula un nuevo deseo ✦</button>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+       FINAL CELEBRATION
+  ═══════════════════════════════════════════ -->
+    <section id="finale">
+      <canvas id="finale-canvas"></canvas>
+      <div class="finale-content reveal-item">
+        <div class="lanterns-row" id="lanterns"></div>
+        <p class="finale-sub">A partir de este momento —</p>
+        <h2 class="finale-title">Haces que el mundo sea más brillante.<br />todos y cada uno de los días ✨</h2>
+        <p class="finale-footer">
+          ¡Feliz cumpleaños, mi bebe Por todo lo hermoso que está por venir. 🌟
+        </p>
+        <div class="balloon-row" id="balloons"></div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
